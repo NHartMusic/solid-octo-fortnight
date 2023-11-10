@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\nconst addCountryForm = document.querySelector('.add')\naddCountryForm.addEventListener('submit', (e) => {\n    e.preventDefault()\n\n    console.log(addCountryForm.country_name.value)\n})\n\n//# sourceURL=webpack://solid-octo-fortnight/./src/index.js?");
+eval("\nconst addCountryForm = document.querySelector('.add')\naddCountryForm.addEventListener('submit', (e) => {\n    e.preventDefault()\n\n    console.log(\n        addCountryForm.country_name.value,\n        addCountryForm.Military_Spending_Ranking_2022.value\n    )\n})\n\n//# sourceURL=webpack://solid-octo-fortnight/./src/index.js?");
 
 /***/ })
 
