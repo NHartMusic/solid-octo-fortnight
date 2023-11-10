@@ -1,8 +1,10 @@
 import { initializeApp } from 'firebase/app'
 import {
     collection,
-    getDocs,
-    getFirestore
+    onSnapshot,
+    getFirestore,
+    orderBy,
+    query
 } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -21,19 +23,21 @@ initializeApp(firebaseConfig)
 //init services
 const db = getFirestore()
 
-//collection reference
+//collection ref
 const colRef = collection(db, 'Total_Spending_2022')
+ 
+//queries 
+const q = query(colRef)
 
-//get collection data 
-getDocs(colRef)
-  .then((snapshot) => {
-      let countries = []
-      snapshot.docs.forEach((doc) => {
+//realtime collection data
+onSnapshot(q, (snapshot) => {
+    let countries = [] 
+
+    snapshot.docs.forEach((doc) => {
         countries.push({ ...doc.data(), id: doc.id })
-      })
-      console.log(countries)
-  })
-
+    })
+    console.log(countries)
+})
 
 const addCountryForm = document.querySelector('.add')
 addCountryForm.addEventListener('submit', (e) => {
