@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log('free palestine')\n\n//# sourceURL=webpack://solid-octo-fortnight/./src/index.js?");
+eval("\nconst addCountryForm = document.querySelector('.add')\naddCountryForm.addEventListener('submit', (e) => {\n    e.preventDefault()\n\n    console.log(addCountryForm.country_name.value)\n})\n\n//# sourceURL=webpack://solid-octo-fortnight/./src/index.js?");
 
 /***/ })
 

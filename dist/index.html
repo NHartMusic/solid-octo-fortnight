@@ -3,57 +3,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Firebase Data Importer</title>
 </head>
 <body>
 
     <h1>Feed Me That Data</h1>
-    <form class="add">
-        <label for="country_name">Country Name</label>
-        <input type="text" name="country_name" required>
 
-        <label for="Military_Spending_Ranking_2022">Military Spending Ranking 2022</label>
-        <input type="text" name="Military_Spending_Ranking_2022" required>
+    <div class="form_wrapper">
+        <form class="add">
+        
+            <div class="input_wrapper">
+                <label for="country_name">Country Name</label>
+                <input type="text" name="country_name" required>
+            </div>
+            
+            <!-- <div class="input_wrapper">
+                <label for="Military_Spending_Ranking_2022">Military Spending Ranking 2022</label>
+                <input type="text" name="Military_Spending_Ranking_2022" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="total_2022">Total Spend 2022 USD (Billions)</label>
+                <input type="text" name="total_2022" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="Military_Spending_Ranking_2021">Military Spending Ranking 2021</label>
+                <input type="text" name="Military_Spending_Ranking_2021" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="total_2021">Total Spend 2021 USD (Billions)</label>
+                <input type="text" name="total_2021" required>
+            </div>
 
-        <label for="total_2022">Total Spend 2022 USD (Billions)</label>
-        <input type="text" name="total_2022" required>
+            <div class="input_wrapper">
+                <label for="population_2022">Population 2022</label>
+                <input type="text" name="population_2022" required>
+            </div>
 
-        <label for="Military_Spending_Ranking_2021">Military Spending Ranking 2021</label>
-        <input type="text" name="Military_Spending_Ranking_2021" required>
-
-        <label for="total_2021">Total Spend 2021 USD (Billions)</label>
-        <input type="text" name="total_2021" required>
-
-        <label for="population_2022">Population 2022</label>
-        <input type="text" name="population_2022" required>
-
-        <label for="population_ranking_2022">Global Population Ranking 2022</label>
-        <input type="text" name="population_ranking_2022" required>
-
-        <label for="population_2021">Population 2021</label>
-        <input type="text" name="population_2021" required>
-
-        <label for="population_ranking_2021">Global Population Ranking 2021</label>
-        <input type="text" name="population_ranking_2021" required>
-
-        <label for="change_2021_2022">Change in Military Expenditure 2021-2022</label>
-        <input type="text" name="change_2021_2022" required>
-
-        <label for="change_2013_2022">Change in Military Expenditure 2013-2022</label>
-        <input type="text" name="change_2013_2022" required>
-
-        <label for="spending_as_share_of_gdp_2022">Spending as Share of GDP, 2022</label>
-        <input type="text" name="spending_as_share_of_gdp_2022" required>
-
-        <label for="spending_as_share_of_gdp_2022">Spending as Share of GDP, 2013</label>
-        <input type="text" name="spending_as_share_of_gdp_2022" required>
-
-        <label for="share_of_expenditure_2022">Share of World Military Expenditure, 2022</label>
-        <input type="text" name="share_of_expenditure_2022" required>
-
-        <button>Add Country</button> 
-    </form>
-
+            <div class="input_wrapper">
+                <label for="population_ranking_2022">Global Population Ranking 2022</label>
+                <input type="text" name="population_ranking_2022" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="population_2021">Population 2021</label>
+                <input type="text" name="population_2021" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="population_ranking_2021">Global Population Ranking 2021</label>
+                <input type="text" name="population_ranking_2021" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="change_2021_2022">Change in Military Expenditure 2021-2022</label>
+                <input type="text" name="change_2021_2022" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="change_2013_2022">Change in Military Expenditure 2013-2022</label>
+                <input type="text" name="change_2013_2022" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="spending_as_share_of_gdp_2022">Spending as Share of GDP, 2022</label>
+                <input type="text" name="spending_as_share_of_gdp_2022" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="spending_as_share_of_gdp_2022">Spending as Share of GDP, 2013</label>
+                <input type="text" name="spending_as_share_of_gdp_2022" required>
+            </div>
+    
+            <div class="input_wrapper">
+                <label for="share_of_expenditure_2022">Share of World Military Expenditure, 2022</label>
+                <input type="text" name="share_of_expenditure_2022" required>
+            </div> -->
+    
+            <button>Add Country</button> 
+        </form>
+    
+    </div>
+   
     <script src="bundle.js"></script>
 </body>
 </html>
