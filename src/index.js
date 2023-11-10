@@ -1,10 +1,11 @@
 import { initializeApp } from 'firebase/app'
 import {
+    addDoc,
     collection,
     onSnapshot,
     getFirestore,
-    orderBy,
-    query
+    query,
+    serverTimestamp,
 } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -39,12 +40,17 @@ onSnapshot(q, (snapshot) => {
     console.log(countries)
 })
 
+//adding documents
 const addCountryForm = document.querySelector('.add')
 addCountryForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    console.log(
-        addCountryForm.country_name.value,
-        addCountryForm.Military_Spending_Ranking_2022.value
-    )
+    addDoc(colRef, {
+        country_name: addCountryForm.country_name.value,
+        military_spending_ranking_2022: addCountryForm.military_spending_ranking_2022.value,
+        createdAt: serverTimestamp(),
+    })
+    .then(() => {
+        addCountryForm.reset(  )
+    })
 })
